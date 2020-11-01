@@ -135,7 +135,7 @@ static AppDelegate s_sharedApplication;
 }
 
 -(void)requestRewardedAds {
-    self.rewardedAd = [[GADRewardedAd alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/1712485313"];
+    self.rewardedAd = [[[GADRewardedAd alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/1712485313"] autorelease];
     
     GADRequest *request = [GADRequest request];
     [self.rewardedAd loadRequest:request completionHandler:^(GADRequestError * _Nullable error) {
